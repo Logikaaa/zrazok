@@ -1,0 +1,276 @@
+/* === Базове скидання === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === Шапка === */
+header {
+  background-color: #dce3f0;
+  padding: 15px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* === Навігація === */
+nav a {
+  margin: 0 15px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #b3c6e0;
+  color: #000;
+}
+
+/* === Заголовки === */
+h1, h2 {
+  text-align: center;
+  color: #1f2f46;
+  margin-bottom: 20px;
+}
+
+/* === Секції === */
+main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+ul {
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* === Блок "Про мене" === */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.about-content img {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* === Картки (хобі, напрямки) === */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 240px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* === Напрямки === */
+.directions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.directions img {
+  width: 220px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* === Блок списків тексту === */
+.text-list {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.text-list div {
+  margin-bottom: 15px;
+}
+
+/* === Карта === */
+.map-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.map-container iframe {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+/* === Підвал === */
+footer {
+  background-color: #dce3f0;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 50px;
+  border-top: 2px solid #b0c4de;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: auto;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer-container a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.socials {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socials img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s;
+}
+
+.socials img:hover {
+  transform: scale(1.1);
+}
+.club-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+
+/* === Адаптивність === */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .directions {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  .footer-container {
+    font-size: 14px;
+  }
+
+  .socials img {
+    width: 28px;
+    height: 28px;
+  }
+}
